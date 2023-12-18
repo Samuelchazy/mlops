@@ -56,7 +56,7 @@ def parse_args():
                         type=str)
     parser.add_argument("--reg_rate", dest='reg_rate',
                         type=float, default=0.01)
-    parser.add_argument("--model_output", dest='model_output'
+    parser.add_argument("--model_output", dest='model_output',
                        type=str)
 
     # parse args
