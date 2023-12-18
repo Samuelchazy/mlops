@@ -37,8 +37,7 @@ def get_csvs_df(path):
 
 # TO DO: add function to split data
 def split_data(df):
-    X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure','TricepsThickness',
-               'SerumInsulin','BMI','DiabetesPedigree','Age']].values, df['Diabetic'].values
+    X, y = df[['Pregnancies', 'PlasmaGlucose', 'DiastolicBloodPressure', 'TricepsThickness', 'SerumInsulin', 'BMI','DiabetesPedigree', 'Age']].values, df['Diabetic'].values
     X_train, X_test, y_train, y_test = train_test_split(X,y, split_size=0.3, random_state=0)
     return X_train, X_test, y_train, y_test
 
@@ -52,12 +51,9 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     # add arguments
-    parser.add_argument("--training_data", dest='training_data',
-                        type=str)
-    parser.add_argument("--reg_rate", dest='reg_rate',
-                        type=float, default=0.01)
-    parser.add_argument("--model_output", dest='model_output',
-                       type=str)
+    parser.add_argument("--training_data", dest='training_data', type=str)
+    parser.add_argument("--reg_rate", dest='reg_rate', type=float, default=0.01)
+    parser.add_argument("--model_output", dest='model_output', type=str)
 
     # parse args
     args = parser.parse_args()
